@@ -1,31 +1,46 @@
+import React, { useState, useEffect } from "react";
+import clouds from "../media/clouds.png";
+import axios from "axios";
+import Planet from "./Planet";
 
-import React, { useState } from "react";
-import clouds from "../media/clouds.png"
+function Home() {
+  const [cloudAnimation, setCloudAnimation] = useState(false);
 
-import Photo from "./Photo";
+  const [photo, setPhoto] = useState(false);
 
-function Home () {
+  const [planetObj, setPlanetObj] = useState({});
 
-    // const { home } = props;
+  useEffect(() => {
+    axios
+      .get(
+        `https://api.nasa.gov/planetary/apod?api_key=Z6mpNwJCGiyQKtfQvRBNbW3lSHhUM2nhvPQOcdjx`
+      )
+      .then((res) => {
+        setPlanetObj(res.data);
+      })
+      .catch((err) => console.error(err));
+  }, []);
 
-    const [cloudAnimation, setCloudAnimation] = useState(false);
+  return (
+    <div>
+      <img
+        /*src = clouds */ className="cloud hidden"
+        alt="a fluffy pink cloud"
+      />
+      <img
+        /* src = clouds */ className="cloud hidden"
+        alt="a fluffy pink cloud"
+      />
 
-    const [photo, setPhoto] = useState(false);
+      
+    <Planet hdurl={ planetObj.hdurl } title={ planetObj.title } />
     
-    return (
 
-        <div>
-            <img   /*src = clouds */   className="cloud hidden" alt="a fluffy pink cloud" />
-            <img   /* src = clouds */   className="cloud hidden" alt="a fluffy pink cloud"/>
-
-            <Photo />
-
-            <footer>
-                <a href="/">home</a>
-            </footer>
-        </div>
-    
-    )
+      <footer>
+        <a href="/">home</a>
+      </footer>
+    </div>
+  );
 }
 
 export default Home;
