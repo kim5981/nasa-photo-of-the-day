@@ -1,9 +1,9 @@
 
-import axios from "axios";
+
 
 export default function Photo () {
 
-    axios.get(`https://api.nasa.gov/planetary/apod?api_key=Z6mpNwJCGiyQKtfQvRBNbW3lSHhUM2nhvPQOcdjx`)
+    
 
     return (
 

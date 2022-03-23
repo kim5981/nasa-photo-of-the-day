@@ -15,8 +15,8 @@ function Home () {
     return (
 
         <div>
-            <img src= { clouds } className="cloud hidden" alt="a fluffy pink cloud" />
-            <img src= { clouds } className="cloud hidden" alt="a fluffy pink cloud"/>
+            <img   /*src = clouds */   className="cloud hidden" alt="a fluffy pink cloud" />
+            <img   /* src = clouds */   className="cloud hidden" alt="a fluffy pink cloud"/>
 
             <Photo />
 
