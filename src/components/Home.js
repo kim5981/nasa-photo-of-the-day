@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import clouds from "../media/clouds.png";
 import axios from "axios";
-import Planet from "./Planet";
+import Space from "./Space";
+import "./Home.css"
 
 
 function Home() {
-  const [cloudAnimation, setCloudAnimation] = useState(false);
+  const [animation, setAnimation] = useState(false);
 
   const [photo, setPhoto] = useState(false);
 
@@ -22,6 +23,7 @@ function Home() {
       .catch((err) => console.error("DEV ERROR", err));
   }, [ ]);
 
+
   return (
     <div>
       <img
@@ -34,12 +36,8 @@ function Home() {
       />
 
       
-    <Planet image={ planetObj.hdurl } title={ planetObj.title } explanation={ planetObj.explanation }  />
+    <Space image={ planetObj.hdurl } title={ planetObj.title } explanation={ planetObj.explanation }  />
     
-
-      <footer>
-        <a href="/">home</a>
-      </footer>
     </div>
   );
 }
