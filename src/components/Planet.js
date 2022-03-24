@@ -4,7 +4,7 @@ import MoreInfo from "./MoreInfo";
 
 export default function Planet (props) {
 
-    const { image, title, explanation } = props;
+    const { image, title, explanation, displayText } = props;
     const [ summary, setSummary ] = useState( null);
 
     // const displaySummary = explanation => {
@@ -24,8 +24,8 @@ export default function Planet (props) {
 
         <img src= { image } alt="" />
         <h2> { title } </h2>
-        < MoreInfo  explanation={ explanation }/>
-        <button>more info</button>
+        < MoreInfo  explanation={ explanation } display={ displayText }/>
+        <button onClick={ displayText }>more info</button>
         </>
     )
 

@@ -3,17 +3,17 @@ import axios from "axios"
 
 export default function MoreInfo ( props ) {
 
-    const { explanation } = props;
-    
+    const { explanation, display } = props;
+    const [showText, setShowText] = useState("");
 
-    // useEffect(  ()  => {
-    //     setSummary(explanation)
-    // }, [explanation])
+     function displayText () {
+        setShowText(explanation);
+    }
 
     return (
         <>
-        <p>{ explanation }</p>
-    
+        <p> {showText} </p>
+        
         </>
     )
 }
