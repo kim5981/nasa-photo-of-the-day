@@ -3,6 +3,7 @@ import clouds from "../media/clouds.png";
 import axios from "axios";
 import Planet from "./Planet";
 
+
 function Home() {
   const [cloudAnimation, setCloudAnimation] = useState(false);
 
@@ -18,8 +19,8 @@ function Home() {
       .then((res) => {
         setPlanetObj(res.data);
       })
-      .catch((err) => console.error(err));
-  }, []);
+      .catch((err) => console.error("DEV ERROR", err));
+  }, [ ]);
 
   return (
     <div>
@@ -33,7 +34,7 @@ function Home() {
       />
 
       
-    <Planet hdurl={ planetObj.hdurl } title={ planetObj.title } />
+    <Planet image={ planetObj.hdurl } title={ planetObj.title } explanation={ planetObj.explanation }  />
     
 
       <footer>
