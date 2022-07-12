@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from "react";
-import clouds from "../media/clouds.png";
 import axios from "axios";
 import Space from "./Space";
 import "./Home.css"
 
 
 function Home(props) {
-  // const [animation, setAnimation] = useState(false);
 
-  // const [photo, setPhoto] = useState(false);
-
-  
-  const [planetObj, setPlanetObj] = useState({});
+    const [planetObj, setPlanetObj] = useState({});
 
   
 

@@ -16,7 +16,7 @@ function App() {
       backgroundImage: `url( ${ space } )`,
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
-      height: "100vh",
+      backgroundPosition: "center"
   }
 
 

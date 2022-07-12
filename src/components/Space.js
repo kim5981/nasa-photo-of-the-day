@@ -4,10 +4,7 @@ import "./Space.css"
 
 export default function Space (props) {
 
-
-    //**************************** PROPS & HELPERS **************************** //
-
-    const { image, title, explanation, display } = props;
+    const { image, title, explanation } = props;
     const [showText, setShowText] = useState("");
 
 
@@ -19,12 +16,6 @@ export default function Space (props) {
         }
     }
 
-    const hideText = (props) => {
-        setShowText("");
-    }
-    
-
-//**************************** STYLING**************************** //
 
     const divStyle = {
         display: "flex",
@@ -32,8 +23,6 @@ export default function Space (props) {
         flexDirection: "column",
         alignItems: "center"
     }
-
-
 
     const imageStyle = {
         width: "30%",
