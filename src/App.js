@@ -3,7 +3,7 @@ import "./App.css"
 import React, { useState } from "react";
 import "./App.css";
 import Home from "./components/Home"
-import space from "./media/space.gif"
+import space from "./media/spaceGif.gif"
 
 
 

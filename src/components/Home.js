@@ -5,12 +5,15 @@ import Space from "./Space";
 import "./Home.css"
 
 
-function Home() {
-  const [animation, setAnimation] = useState(false);
+function Home(props) {
+  // const [animation, setAnimation] = useState(false);
 
-  const [photo, setPhoto] = useState(false);
+  // const [photo, setPhoto] = useState(false);
 
+  
   const [planetObj, setPlanetObj] = useState({});
+
+  
 
   useEffect(() => {
     axios
@@ -23,18 +26,9 @@ function Home() {
       .catch((err) => console.error("DEV ERROR", err));
   }, [ ]);
 
-
+  
   return (
     <div>
-      <img
-        /*src = clouds */ className="cloud hidden"
-        alt="a fluffy pink cloud"
-      />
-      <img
-        /* src = clouds */ className="cloud hidden"
-        alt="a fluffy pink cloud"
-      />
-
       
     <Space image={ planetObj.hdurl } title={ planetObj.title } explanation={ planetObj.explanation }  />
     

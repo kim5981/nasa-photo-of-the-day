@@ -1,13 +1,13 @@
 import React from "react";
+import Home from "./Home"
 
-function Loading () {
+function Loading (props) {
 
-
-    return (
-        <>
-            <h1> Loading.. </h1>
-        </>
-    )
+    if(!props.photoOfTheDay){
+        return <h3>Loading...</h3>
+    } else {
+       return <Home/> 
+    }
 }
 
 export default Loading;
